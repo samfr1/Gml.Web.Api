@@ -919,10 +919,10 @@ public static class EndpointsExtensions
         app.MapGet("/api/v1/file/{fileHash}", FileHandler.GetFile)
             .WithOpenApi(generatedOperation =>
             {
-                generatedOperation.Summary = "Получение файла на загрузку";
+                generatedOperation.Summary = "";
                 return generatedOperation;
             })
-            .WithDescription("Получение файла на загрузку")
+            .WithDescription("Получение файла на загрузку test")
             .WithName("Download file")
             .WithTags("Files")
             .Produces<ResponseMessage>((int)HttpStatusCode.NotFound);
