@@ -14,7 +14,7 @@ public static class RegisterSwaggerExtensions
             {
                 Title = projectName,
                 Version = "v1",
-                Description = projectDescription
+                Description = (projectDescription ?? "") + " test"
             });
 
             var securitySchema = new OpenApiSecurityScheme
